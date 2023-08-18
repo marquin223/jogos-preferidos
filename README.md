@@ -1,6 +1,7 @@
 # jogos-preferidos
 
-Esse projeto tem como objetivo listar os jogos favoritos do  
+Esse projeto tem como objetivo listar os jogos favoritos do
+usuário e compartilhar com outros.
 
 
 
