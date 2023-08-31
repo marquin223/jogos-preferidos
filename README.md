@@ -4,14 +4,13 @@ Esse projeto tem como objetivo listar os jogos favoritos do
 usuário e compartilhar com outros.
 
 
-
 ## Endereço de Deploy - GitHub Pages
 
 https://github.com/marquin223/jogos-preferidos
 
 ## Protótipo
 
-https://www.figma.com/file/a1VDbO1aNfZyulQPxT99OE/beleza-em-dia?node-id=3%3A80
+https://www.figma.com/file/yAXScZtaagsJrw19x1Vemt/Jogos-preferidos?type=design&node-id=0%3A1&mode=design&t=810Gr3y41Fu6HMZz-1
 
 ## Checklist | Indicadores de Desempenho (ID) dos Resultados de Aprendizagem (RA)
 
