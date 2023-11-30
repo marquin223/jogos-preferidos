@@ -1,0 +1,113 @@
+html {
+    background-color: black;
+}
+header {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+h2.centro {
+    color: white;
+    font-size: clamp(1.25rem, 2.2074rem + -1.0638vw, 1.875rem);
+    padding: 20px;
+}
+
+.mb-3 {
+    background-color: black;
+    
+}
+
+.btn {
+    margin: 20px;
+}
+
+p {
+    color:white;
+}
+
+.retangulo {
+    width: 280px;
+    height: 360px;
+    border: solid white;
+    margin-bottom: 20px;
+}
+
+.imagem {
+    margin-top: 14px;
+    width: 156px;
+    height: 200px;
+    border: solid white;
+}
+
+.centro {
+    color: white;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bi.bi-trash {
+    color: white;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.form-select {
+    margin-left: 8px;
+}
+
+.input-group {
+    margin-left: 37px;
+}
+
+.baixo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+}
+
+.modal-body .imagem {
+    border: solid rgba(255, 255, 255, 0.281);
+}
+
+#game-list {
+    gap: 10px;
+}
+
+.no-result {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.no-result-icon {
+    font-size: 8rem;
+    margin-bottom: 1rem;
+}
+
+.acima {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+span {
+    color: white;
+    padding: 5px;
+}
+
+.botao-fixado {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}

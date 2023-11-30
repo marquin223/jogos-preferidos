@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus jogos</title>
+    <link rel="stylesheet" href="jogos.css">
+    <link rel="stylesheet" href="eskeleton.css">
+    <link rel="stylesheet" href="../../../assets/libraries/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../assets/libraries/bootstrap-icons/bootstrap-icons.svg">
+</head>
+<body>
+    <header>
+        <img src="../../../assets/resources/img/logotipo.png" alt="">
+    </header>
+    <hr>
+    <main>
+        <div class="container" id="game-container">
+            <h2 class="centro">Jogos</h2>
+            <div id="no-result" class="no-result" style="display: none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-frown no-result-icon" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                    <path d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5m4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5"/>
+                </svg>
+                <p>Não há resultados disponíveis.</p>
+            </div>
+
+            <div class="row row-cols-lg-4 centro" id="game-list">
+                <div class="col centro" id="registro">
+                    <div class="retangulo">
+                        <span class="acima" id="span-nome">a</span>
+                        <div class="centro">
+                            <div class="imagem centro"></div>
+                        </div>
+                        <div class="baixo">
+                            <p>Progresso:</p>
+                            <select class="form-select form-select-sm" aria-label="Small select example">
+                                <option selected>Progresso</option>
+                                <option value="1">Platinado</option>
+                                <option value="2">Zerado</option>
+                                <option value="3">Em progresso</option>
+                            </select>
+                        </div>
+                        <div class="baixo">
+                            <p>Horas:</p>
+                            <div class="input-group input-group-sm mb-3">
+                                <input type="number" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>    
+            <div class="modal fade" id="jogos-modal" tabindex="-1" aria-labelledby="jogos-modal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form id="jogs">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Escolha o jogo</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="input-group input-group-sm mb-3">
+                                    <input type="text" class="form-control" id="input-nome" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                </div>
+                                <div class="imagem">a</div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" id="bota" class="btn btn-secondary">adicionar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="botao-fixado">
+                <button type="button" id="botao-adiciona" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#jogos-modal">+</button>
+            </div>   
+        </div>  
+    </main>
+    <script src="../../../assets/libraries/jquery/dist/jquery.js"></script>
+    <script src="../../../assets/libraries/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="module" src="jogos.js"></script>
+    <script src="storage.js"></script>
+</body>
+</html>

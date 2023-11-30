@@ -1,0 +1,58 @@
+html {
+    background-color: black;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+main h2, form  {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+h2 {
+    font-size: clamp(1.25rem, 2.2074rem + -1.0638vw, 1.875rem);
+}
+
+.mb-3 {
+    background-color: black;
+    
+}
+
+.btn {
+    margin: 20px;
+}
+
+p {
+    color:white;
+}
+
+.erro {
+    color: #e40f0f;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: red;
+}
+  
+.erro {
+    display: none;
+}
+  
+input:invalid:not(:placeholder-shown) ~ .erro {
+    display: block;
+}
+  
+select:invalid:default ~ .erro {
+    display: block;
+}
+  
+input:valid ~ .erro {
+    display: none;
+}

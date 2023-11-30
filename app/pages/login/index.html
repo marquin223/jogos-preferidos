@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Preferidos</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../../../assets/libraries/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <header>
+        <img src="../../../assets/resources/img/logotipo.png" alt="">
+    </header>
+    <hr>
+    <main>
+        <h2>Login</h2>
+        <form id="form-login">
+            <div class="mb-3">
+                <label for="input-email" class="form-label">E-mail:</label>
+                <input type="email" pattern="\w+@\w+\.\w+(\.\w{2})?" class="form-control" id="input-email" placeholder="nome@exemplo.com" required>
+                <span class="erro" id="email-erro">Email inválido</span>
+            </div>
+            <div class="mb-3">
+                <label for="input-senha" class="form-label">Senha:</label>
+                <input type="password" class="form-control" id="input-senha" placeholder="senha" required>
+                <span class="erro" id="senha-erro">Senha inválida</span>
+            </div>
+            <button id="botao-submit" type="submit" class="btn btn-secondary">Entrar</button>
+            <p>Ainda não tem conta? Crie agora mesmo.</p>
+            <a href="../cadastro/cadastro.html"><button type="button" class="btn btn-secondary">Cadastrar-se</button></a>
+        </form>
+    </main>
+    <script src="../../../assets/libraries/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="module" src="login.js"></script>
+</body>
+</html>
