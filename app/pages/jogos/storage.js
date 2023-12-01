@@ -19,6 +19,29 @@ function loadAndDisplayjogos() {
     const clonedCard = cardModel.cloneNode(true);
   
     clonedCard.querySelector('#span-nome').textContent = game.jogo.name;
+
+    const APIKEY = '7ce3ca81aeae42e090e5481a28797345'
+
+    const url = `https://api.rawg.io/api/games?key=${APIKEY}&dates=2011-01-01,2023-06-01&ordering=-added`
+
+    fetch(url)  
+      .then(response => response.json())
+      .then(data => {
+        console.log('OI')
+        
+        data = data.results;
+        console.log(data);
+        for(let i = 0; i < data.length; i++){
+          console.log(data[i])
+          let g = data[i];
+          if(game.jogo.name == g.name){
+            console.log(data)
+            clonedCard.querySelector('#img-game').src = g.background_image;
+          }
+        }
+      });
+        
+  
       
   
     gameList.appendChild(clonedCard);
@@ -30,7 +53,7 @@ function loadAndDisplayjogos() {
 }
   
 function showResultsContainer(hasResults) {
-  const noResultDiv = document.getElementById('no-result');
+  /* const noResultDiv = document.getElementById('no-result');
   const jogoContainerDiv = document.getElementById('game-container');
   const jogoContainerSkeleton = document.getElementById(
     'game-container-skeleton');
@@ -41,6 +64,6 @@ function showResultsContainer(hasResults) {
   } else {
     noResultDiv.style.display = 'block';
     jogoContainerDiv.style.display = 'none';
-  }
+  }*/
 }
 window.onload = loadAndDisplayjogos;
