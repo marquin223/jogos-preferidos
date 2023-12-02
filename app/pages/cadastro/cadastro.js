@@ -1,6 +1,6 @@
 import { User } from '../../models/user.js';
-import { Report } from '../../models/report.js';
-import { ReportService } from '../../service/reportservice.js';
+import { Usuario } from '../../models/usuario.js';
+import { NovoUsuario } from '../../service/NovoUsuario.js';
 
 (function () {
 
@@ -37,16 +37,16 @@ import { ReportService } from '../../service/reportservice.js';
 
         const user = readFormDataAndCreateUser();
 
-        let report = new Report(user);
+        let usuario = new Usuario(user);
 
-        saveReportLocal(report);
+        saveReportLocal(usuario);
 
     }
 
-    function saveReportLocal(report) {
-        const reportService = new ReportService();
+    function saveReportLocal(usuario) {
+        const novoUsuario = new NovoUsuario();
     
-        reportService.saveLocal(report);
+        novoUsuario.saveLocal(usuario);
     }
 
     function readFormDataAndCreateUser() {

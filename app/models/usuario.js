@@ -1,4 +1,4 @@
-export class Report {
+export class Usuario {
     constructor(user) {
       this.user = user;
     }
