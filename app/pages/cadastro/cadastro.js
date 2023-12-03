@@ -22,7 +22,7 @@ import { NovoUsuario } from '../../service/NovoUsuario.js';
         validateSenha();
     });
 
-    enableSubmitButtonOnFormChange();
+    desabilitarBotao();
 
 
     document.getElementById('form-cadastro').onsubmit = function (event) {
@@ -170,7 +170,7 @@ import { NovoUsuario } from '../../service/NovoUsuario.js';
     }
 
 
-    function enableSubmitButtonOnFormChange() {
+    function desabilitarBotao() {
         const submitButton = document.getElementById('botao-cadastro');
         submitButton.disabled = true;
         

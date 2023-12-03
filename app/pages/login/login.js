@@ -1,8 +1,5 @@
 
 (function () {
-    document.querySelector('#botao-submit').addEventListener('click', function () {
-        window.location = "../jogos/jogos.html"
-    });
     
     document.querySelector('#input-email').addEventListener('blur', function () {
         validateEmail();
@@ -12,8 +9,12 @@
         validateSenha();
     });
 
-    enableSubmitButtonOnFormChange();
+    document.querySelector('#input-email').addEventListener('blur', function () {
+        validateUsuario();
+    });
 
+    desabilitarBotao();
+    
 
     document.getElementById('form-login').onsubmit = function (event) {
 
@@ -21,7 +22,7 @@
 
 
         if (!isFormValid()) {
-            window.alert('Por favor, verifique os campos destacados.');
+            window.alert('Email ou senha incorretos');
             return;
         }
 
@@ -79,22 +80,40 @@
         return true;
     }
 
+    function validateUsuario() {
+        const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+        for (let i = 0; i < usuarios.length; i++) {
+            const usuario = usuarios[i];
+
+            if (document.getElementById('input-email').value == usuario.user.email) {
+                if (document.getElementById('input-senha').value == usuario.user.senha) {
+                    return true
+                }
+            }
+    
+        }
+    }
 
     function isFormValid() {
         return (
         validateEmail() &&
-        validateSenha()
+        validateSenha() &&
+        validateUsuario()
         );
     }
 
 
-    function enableSubmitButtonOnFormChange() {
+    function desabilitarBotao() {
         const submitButton = document.getElementById('botao-submit');
         submitButton.disabled = true;
         
         document.getElementById('form-login').addEventListener('change', function () {
             if (this.checkValidity()) {
                 submitButton.disabled = false;
+                if (validateUsuario() == true)
+                    document.querySelector('#botao-submit').addEventListener('click', function () {
+                        window.location = "../jogos/jogos.html"
+                    });
             } else {
                 submitButton.disabled = true;
             }
