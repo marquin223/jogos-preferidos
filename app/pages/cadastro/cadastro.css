@@ -17,7 +17,7 @@ main h2, form  {
 }
 
 h2 {
-    font-size: clamp(1.25rem, 2.2074rem + -1.0638vw, 1.875rem);
+    font-size: clamp(1.25rem, 0.9176rem + 1.0638vw, 1.875rem);
 }
 
 .mb-3 {

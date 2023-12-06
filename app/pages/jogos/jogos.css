@@ -20,7 +20,7 @@ main {
 
 h2.centro {
     color: white;
-    font-size: clamp(1.25rem, 2.2074rem + -1.0638vw, 1.875rem);
+    font-size: clamp(1.25rem, 0.9176rem + 1.0638vw, 1.875rem);
     padding: 20px;
 }
 
@@ -51,6 +51,8 @@ p {
     border: solid white;
 }
 
+
+
 .centro {
     color: white;
     margin-top: 10px;
@@ -58,13 +60,6 @@ p {
     justify-content: space-around;
     align-items: center;
     margin-bottom: 8px;
-}
-
-
-.bi.bi-trash {
-    color: white;
-    margin-left: 20px;
-    margin-top: 20px;
 }
 
 .form-select {
@@ -87,7 +82,7 @@ p {
 }
 
 #game-list {
-    gap: 10px;
+    gap: 0px;
 }
 
 .no-result {
