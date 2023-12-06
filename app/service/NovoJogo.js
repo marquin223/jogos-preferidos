@@ -13,11 +13,9 @@ export class NovoJogo {
   
       // Adicionando o novo relatório ao array
       jogos.push(game);
-  
-      // Salvando os relatórios atualizados no armazenamento local
+
       localStorage.setItem(this.LOCAL_STORAGE_KEY, JSON.stringify(jogos));
-  
-      // Retornando os relatórios atualizados
+
       return jogos;
     }
   }

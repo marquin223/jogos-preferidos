@@ -9,9 +9,6 @@
         validateSenha();
     });
 
-    document.querySelector('#input-email').addEventListener('blur', function () {
-        validateUsuario();
-    });
 
     desabilitarBotao();
     

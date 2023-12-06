@@ -16,14 +16,14 @@ import { NovoJogo } from '../../service/NovoJogo.js';
 
         event.preventDefault();
 
-        const jogo = readFormDataAndCreateUser();
+        const jogo = LerEcriarJogo();
 
         let game = new Game(jogo);
         
         saveReportLocal(game)
     }
 
-    function readFormDataAndCreateUser() {
+    function LerEcriarJogo() {
         let name = document.getElementById('input-nome').value;
         
         return new Jogo(name);
