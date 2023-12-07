@@ -1,14 +1,13 @@
 function loadAndDisplayjogos() {
-    // Obtém os relatórios do localStorage
+    // pega os jogos do localStorage
   const jogos = JSON.parse(localStorage.getItem('jogos')) || [];
   
-    // Obtém a referência ao da lista no HTML
+    // lista no HTML
   const gameList = document.getElementById('game-list');
   
-    // Obtém o modelo do card
+    // modelo do card
   const cardModel = document.querySelector('#registro');
   
-    // Limpa a lista antes de adicionar os relatórios e depois de salvar a referência em cardModel
   gameList.innerHTML = '';
   
     const APIKEY = '7ce3ca81aeae42e090e5481a28797345'

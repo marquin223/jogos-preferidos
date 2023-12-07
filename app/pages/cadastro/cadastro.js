@@ -35,7 +35,7 @@ import { NovoUsuario } from '../../service/NovoUsuario.js';
             return;
         }
 
-        const user = readFormDataAndCreateUser();
+        const user = LerECriarUsusuario();
 
         let usuario = new Usuario(user);
 
@@ -49,7 +49,7 @@ import { NovoUsuario } from '../../service/NovoUsuario.js';
         novoUsuario.saveLocal(usuario);
     }
 
-    function readFormDataAndCreateUser() {
+    function LerECriarUsusuario() {
         let nome = document.getElementById('input-nome').value;
         let email = document.getElementById('input-email').value;
         let senha = document.getElementById('input-senha').value;
