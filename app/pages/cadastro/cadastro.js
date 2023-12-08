@@ -77,6 +77,7 @@ import { NovoUsuario } from '../../service/NovoUsuario.js';
         nomeInput.setCustomValidity('Nome inválido');
         return true;
         }
+        
 
         nomeError.style.display = 'none';
         return true;

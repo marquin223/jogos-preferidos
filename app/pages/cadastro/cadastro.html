@@ -17,17 +17,17 @@
         <form id="form-cadastro">
             <div class="mb-3">
                 <label for="input-nome" class="form-label">Nome:</label>
-                <input type="text" pattern="[A-Z]+[a-z|à-ú+\s]+[A-Z+a-z|à-ú]+$" class="form-control" id="input-nome" placeholder="Nome">
+                <input type="text" pattern="^([a-zA-Z]{2,}\s[a-zA-Z]{1,}[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)" class="form-control" id="input-nome" placeholder="Nome" required>
                 <span class="erro" id="nome-erro">Nome inválido</span>
             </div>
             <div class="mb-3">
                 <label for="input-email" class="form-label">E-mail:</label>
-                <input type="email" pattern="\w+@\w+\.\w+(\.\w{2})?" class="form-control" id="input-email" placeholder="nome@exemplo.com">
+                <input type="email" pattern="\w+@\w+\.\w+(\.\w{2})?" class="form-control" id="input-email" placeholder="nome@exemplo.com" required>
                 <span class="erro" id="email-erro">Email inválido</span>
             </div>
             <div class="mb-3">
                 <label for="input-tel" class="form-label">Telefone:</label>
-                <input type="text" class="form-control" id="input-tel" placeholder="(99)9999-9999" required>
+                <input type="text" class="form-control" id="input-tel" placeholder="(99)9999-9999">
                 <span class="erro" id="tel-erro">Telefone inválido</span>
             </div>
             <div class="mb-3">
